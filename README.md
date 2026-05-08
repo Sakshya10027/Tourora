@@ -1,77 +1,68 @@
-# **Airbnb Clone**
+# **Tourora**
 
 [![Node.js Version](https://img.shields.io/badge/node-%3E%3D14.0.0-brightgreen)](https://nodejs.org/)
 [![License: ISC](https://img.shields.io/badge/License-ISC-blue.svg)](https://opensource.org/licenses/ISC)
 [![npm version](https://img.shields.io/badge/npm-1.0.0-red)](https://www.npmjs.com/package/airbnb-clone)
 
-A full-stack travel marketplace application that allows users to list, discover, and review accommodations worldwide.
+Tourora is a premium full-stack travel marketplace application that allows users to list, discover, and book unique accommodations worldwide.
 
 ---
 
 ## **Table of Contents**
 
 - [Overview](#overview)
-- [Features](#features)
+- [Key Features](#key-features)
 - [Tech Stack](#tech-stack)
 - [Project Structure](#project-structure)
 - [Getting Started](#getting-started)
 - [Environment Variables](#environment-variables)
-- [API Documentation](#api-documentation)
 - [Available Scripts](#available-scripts)
-- [Contributing](#contributing)
 - [License](#license)
 
 ---
 
 ## **Overview**
 
-This project is a comprehensive clone of Airbnb, designed to provide a seamless platform for travelers and hosts. It solves the problem of finding reliable local stays by providing a community-driven marketplace. The application follows a classic MVC (Model-View-Controller) architecture, using Node.js/Express for the backend, MongoDB for data persistence, and EJS for dynamic frontend rendering.
+Tourora provides a seamless platform for travelers and hosts, solving the challenge of finding and booking reliable local stays. Built with a robust MVC (Model-View-Controller) architecture, it leverages Node.js/Express, MongoDB, and EJS to deliver a high-performance, user-centric experience.
 
 ---
 
-## **Features**
+## **Key Features**
 
-### **Frontend Features**
+### **Booking & Search**
+- **Instant Booking System**: Logged-in users can book properties directly via a responsive modal with date validation.
+- **Smart Redirection**: Unauthenticated users trying to book are redirected to login and then automatically returned to their chosen listing.
+- **Global Search**: Find accommodations by Title, Location, or Country with real-time backend filtering.
+
+### **Frontend & UX**
+- **Full Responsiveness**: Optimized for mobile (375px+), tablet, and desktop screens.
+- **Modern Navigation**: Centered search bar on desktop and a streamlined single-line layout on mobile.
 - **Dynamic Listing Display**: Browse accommodations with responsive cards and category filters (Trending, Rooms, Mountains, etc.).
 - **Interactive Tax Toggle**: Real-time price adjustment to show totals including GST.
-- **User Authentication UI**: Dedicated signup and login pages with client-side validation.
-- **Responsive Design**: Built with Bootstrap to ensure a consistent experience across mobile, tablet, and desktop.
-- **Rich Media**: High-quality image support for listings via Cloudinary.
 
-### **Backend Features**
-- **Robust Authentication**: Secure user sessions and password hashing using Passport.js and passport-local-mongoose.
-- **Listing Management**: Complete CRUD operations for property listings, including image upload support.
-- **Review System**: Nested review functionality allowing users to rate and comment on listings.
-- **Authorization Middleware**: Granular access control ensuring only owners can edit/delete their listings and authors can delete their reviews.
-- **Cloud Image Storage**: Integration with Cloudinary for scalable image hosting.
-- **Server-Side Validation**: Strict data integrity using Joi schemas.
-- **Global Error Handling**: Centralized error management and custom ExpressError utility.
+### **Backend & Security**
+- **Robust Authentication**: Secure user sessions and password hashing using Passport.js.
+- **Authorization Middleware**: Granular access control for listing owners and review authors.
+- **Cloud Image Storage**: High-performance image hosting via Cloudinary.
+- **Server-Side Validation**: Strict data integrity using Joi schemas and centralized error handling.
 
 ---
 
 ## **Tech Stack**
 
 ### **Frontend**
-- **Templating Engine**: [EJS (Embedded JavaScript)](https://ejs.co/)
-- **Layouts**: [EJS-Mate](https://www.npmjs.com/package/ejs-mate)
-- **Styling**: [Bootstrap 5](https://getbootstrap.com/), Custom CSS
-- **Icons**: [FontAwesome](https://fontawesome.com/)
+- **Templating**: EJS (Embedded JavaScript) with EJS-Mate layouts.
+- **Styling**: Bootstrap 5 & Custom CSS (Media Queries for all breakpoints).
+- **Interactions**: Vanilla JavaScript for modals, validation, and dynamic UI updates.
 
 ### **Backend**
-- **Runtime**: [Node.js](https://nodejs.org/)
-- **Framework**: [Express.js](https://expressjs.com/)
-- **Authentication**: [Passport.js](https://www.passportjs.org/)
-- **Validation**: [Joi](https://joi.dev/)
-- **File Handling**: [Multer](https://www.npmjs.com/package/multer)
-- **Utilities**: [method-override](https://www.npmjs.com/package/method-override), [connect-flash](https://www.npmjs.com/package/connect-flash)
+- **Runtime**: Node.js & Express.js.
+- **Authentication**: Passport.js & passport-local-mongoose.
+- **Session Management**: express-session with connect-mongo (MongoDB session store).
+- **File Handling**: Multer & multer-storage-cloudinary.
 
 ### **Database**
-- **Database**: [MongoDB](https://www.mongodb.com/)
-- **ORM**: [Mongoose](https://mongoosejs.com/)
-
-### **Other Tools**
-- **Image Hosting**: [Cloudinary](https://cloudinary.com/)
-- **Environment Management**: [dotenv](https://www.npmjs.com/package/dotenv)
+- **Primary DB**: MongoDB (Atlas) via Mongoose ODM.
 
 ---
 
