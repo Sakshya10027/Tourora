@@ -81,6 +81,9 @@ async function main() {
 app.use("/listings", listings);
 app.use("/listings/:id/reviews", reviews);
 app.use("/", user);
+app.get("/", (req, res) => {
+  res.redirect("/listings");
+});
 
 // 404 Middleware
 app.use((req, res, next) => {
