@@ -64,7 +64,7 @@ body {
 
 .card-img-top {
   border-radius: 1rem !important;
-  width: 100 !important;
+  width: 100% !important;
   object-fit: cover !important;
 }
 
@@ -111,3 +111,74 @@ body {
   padding-right: 0;
   border: none !important;
 }
+
+/* Responsive Design */
+
+/* Laptop: max-width 1024px */
+@media (max-width: 1024px) {
+  .show-card {
+    width: 66.666667%;
+    margin-left: 16.666667%;
+  }
+}
+
+/* Tablet: max-width 768px */
+@media (max-width: 768px) {
+  .navbar {
+    height: auto;
+    padding: 0.5rem 0;
+  }
+  
+  .search-input {
+    padding: 0.5rem 1rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .f-info {
+    height: auto;
+    padding: 2rem 1rem;
+  }
+
+  .show-card {
+    width: 83.333333%;
+    margin-left: 8.333333%;
+  }
+}
+
+/* Mobile: max-width 480px */
+@media (max-width: 480px) {
+  .show-card {
+    width: 100%;
+    margin-left: 0;
+  }
+
+  .show-img {
+    height: 25vh;
+  }
+
+  .btns {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .btns .btn {
+    width: 100% !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+  }
+
+  h3, h4 {
+    font-size: 1.5rem;
+  }
+
+  .f-info-socials i {
+    font-size: 1.5rem;
+  }
+}
+
+/* Utility for responsive images */
+img {
+  max-width: 100%;
+  height: auto;
+}
+
