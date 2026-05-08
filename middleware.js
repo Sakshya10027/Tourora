@@ -31,6 +31,9 @@ module.exports.isAuthor = async (req, res, next) => {
 };
 
 module.exports.saveRedirectUrl = (req, res, next) => {
+  if (req.query.redirect) {
+    req.session.redirectUrl = decodeURIComponent(req.query.redirect);
+  }
   if (req.session.redirectUrl) {
     res.locals.redirectUrl = req.session.redirectUrl;
   }

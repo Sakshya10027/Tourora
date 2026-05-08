@@ -18,6 +18,15 @@
         <%= listing.location %> <br />
         <%= listing.country %>
       </p>
+      <button 
+        class="btn btn-dark add-btn mt-3 w-100 book-now-btn" 
+        data-bs-toggle="modal" 
+        data-bs-target="<%= currUser ? '#bookingModal' : '' %>" 
+        data-title="<%= listing.title %>"
+        data-id="<%= listing._id %>"
+        data-logged-in="<%= !!currUser %>"
+        onclick="handleBookingClick(this)"
+      >Book Now</button>
     </div>
     <br />
 
