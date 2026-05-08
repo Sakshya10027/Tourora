@@ -29,16 +29,14 @@ Tourora provides a seamless platform for travelers and hosts, solving the challe
 
 ## **Key Features**
 
-### **Booking & Search**
-- **Instant Booking System**: Logged-in users can book properties directly via a responsive modal with date validation.
-- **Smart Redirection**: Unauthenticated users trying to book are redirected to login and then automatically returned to their chosen listing.
+### **Search & Discovery**
 - **Global Search**: Find accommodations by Title, Location, or Country with real-time backend filtering.
+- **Dynamic Listing Display**: Browse accommodations with responsive cards and category filters (Trending, Rooms, Mountains, etc.).
+- **Interactive Tax Toggle**: Real-time price adjustment to show totals including GST.
 
 ### **Frontend & UX**
 - **Full Responsiveness**: Optimized for mobile (375px+), tablet, and desktop screens.
 - **Modern Navigation**: Centered search bar on desktop and a streamlined single-line layout on mobile.
-- **Dynamic Listing Display**: Browse accommodations with responsive cards and category filters (Trending, Rooms, Mountains, etc.).
-- **Interactive Tax Toggle**: Real-time price adjustment to show totals including GST.
 
 ### **Backend & Security**
 - **Robust Authentication**: Secure user sessions and password hashing using Passport.js.
