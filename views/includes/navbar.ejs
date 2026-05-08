@@ -47,30 +47,55 @@
       border-bottom: none;
     }
   }
+
+  /* Laptop/Desktop specific fixes */
+  @media (min-width: 768px) {
+    .search-container {
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+      width: auto;
+      max-width: 400px;
+    }
+    .container-fluid {
+      position: relative;
+    }
+    .navbar-collapse {
+      width: 100%;
+      display: flex !important;
+      justify-content: space-between;
+    }
+    .top-row-container {
+      width: auto !important;
+    }
+    .navbar-toggler {
+      display: none;
+    }
+  }
 </style>
 
 <nav class="navbar navbar-expand-md bg-light border-bottom sticky-top">
-  <div class="container-fluid d-flex flex-wrap align-items-center">
-    <!-- Top Row: Brand, Search, Toggler -->
-    <div class="d-flex align-items-center flex-grow-1 flex-nowrap w-100 mb-md-0">
-      <a class="navbar-brand" href="/"><i class="fa-brands fa-avianex"></i></a>
-      
-      <div class="navbar-nav search-container flex-grow-1">
-        <form class="d-flex" role="search" action="/listings" method="GET">
-          <input class="form-control me-2 search-input" type="search" placeholder="Search Destination" name="search"/>
-          <button class="btn btn-search" type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
-        </form>
-      </div>
+  <div class="container-fluid d-flex align-items-center">
+    <!-- Brand Logo -->
+    <a class="navbar-brand" href="/"><i class="fa-brands fa-avianex"></i></a>
 
-      <button
-        class="navbar-toggler ms-2"
-        type="button"
-        data-bs-toggle="collapse"
-        data-bs-target="#navbarNavAltMarkup"
-      >
-        <span class="navbar-toggler-icon"></span>
-      </button>
+    <!-- Search Bar (Centered on Desktop, in-line on Mobile) -->
+    <div class="navbar-nav search-container">
+      <form class="d-flex" role="search" action="/listings" method="GET">
+        <input class="form-control me-2 search-input" type="search" placeholder="Search Destination" name="search"/>
+        <button class="btn btn-search" type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
+      </form>
     </div>
+
+    <!-- Mobile Toggler -->
+    <button
+      class="navbar-toggler ms-auto"
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#navbarNavAltMarkup"
+    >
+      <span class="navbar-toggler-icon"></span>
+    </button>
 
     <!-- Collapsible Menu -->
     <div class="collapse navbar-collapse" id="navbarNavAltMarkup">

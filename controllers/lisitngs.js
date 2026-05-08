@@ -3,7 +3,18 @@ const { listingSchema } = require("../schema.js");
 const ExpressError = require("../utils/ExpressError.js");
 
 module.exports.index = async (req, res) => {
-  const alllistings = await Listing.find({});
+  const { search } = req.query;
+  let query = {};
+  if (search) {
+    query = {
+      $or: [
+        { location: { $regex: search, $options: "i" } },
+        { country: { $regex: search, $options: "i" } },
+        { title: { $regex: search, $options: "i" } },
+      ],
+    };
+  }
+  const alllistings = await Listing.find(query);
   res.render("listings/index.ejs", { alllistings });
 };
 
