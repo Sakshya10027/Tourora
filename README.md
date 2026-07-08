@@ -2,7 +2,7 @@
 
 # Tourora
 
-A premium full-stack travel marketplace enabling users to list, discover, and book unique accommodations worldwide.
+A premium full-stack travel marketplace enabling users to list, discover, unique accommodations worldwide.
 
 ![Node.js](https://img.shields.io/badge/NODE.JS-339933?style=for-the-badge&logo=nodedotjs&logoColor=white)
 ![Express](https://img.shields.io/badge/EXPRESS-000000?style=for-the-badge&logo=express&logoColor=white)
